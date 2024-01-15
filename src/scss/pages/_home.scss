@@ -1,0 +1,99 @@
+// -----------------------------------------------------------------------------
+// This file contains styles that are specific to the home page.
+// -----------------------------------------------------------------------------
+body {
+  background: black;
+  font-family: var(--overpass);
+}
+
+p {
+  font-size: 15px;
+}
+
+main,
+section {
+  background: var(--very-dark-blue);
+  width: 350px;
+  padding: 1.5rem;
+  border-radius: 1rem;
+}
+
+main {
+  .star-container {
+    background: var(--dark-blue);
+    width: 3rem;
+    height: 3rem;
+    border-radius: 999px;
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+  }
+  h1 {
+    color: var(--white);
+  }
+  p {
+    color: var(--medium-grey);
+  }
+  form {
+    .button-container {
+      display: flex;
+      justify-content: space-between;
+      margin-block: 1.5rem;
+      button {
+        background: var(--dark-blue);
+        border-radius: 999px;
+        width: 3rem;
+        height: 3rem;
+        color: var(--medium-grey);
+        font-weight: var(--bold);
+        &:hover {
+          background: var(--orange);
+          color: var(--white);
+        }
+      }
+      .checked {
+        background: var(--light-grey);
+        color: var(--white);
+      }
+    }
+    button[type="submit"] {
+      width: 100%;
+      background: var(--orange);
+      color: var(--white);
+      border-radius: 999px;
+      text-align: center;
+      letter-spacing: 1px;
+      padding-block: 0.5rem;
+      &:hover {
+        background: var(--white);
+        color: var(--orange);
+      }
+    }
+  }
+}
+
+section {
+  img {
+    margin: auto;
+  }
+  div {
+    display: flex;
+    margin-block: 1.5rem;
+    p {
+      background: var(--dark-blue);
+      color: var(--orange);
+      margin: auto;
+      padding: 0.25rem 1rem;
+      border-radius: 999px;
+      line-height: 1.5;
+    }
+  }
+  h2 {
+    text-align: center;
+    color: var(--white);
+  }
+  p {
+    margin-block: 0.5rem;
+    color: var(--light-grey);
+    text-align: center;
+  }
+}
