@@ -1,4 +1,3 @@
-import "../css/style.css";
 import illustration from "../assets/illustration-thank-you.svg";
 
 interface Props {

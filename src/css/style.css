@@ -117,14 +117,16 @@ body {
 
 p {
   font-size: 15px;
+  color: var(--medium-grey);
 }
 
 main,
 section {
-  background: var(--very-dark-blue);
+  background: linear-gradient(to bottom, var(--dark-blue) -35%, var(--very-dark-blue));
   width: 350px;
   padding: 1.5rem;
   border-radius: 1rem;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
 main .star-container {
@@ -133,13 +135,15 @@ main .star-container {
   height: 3rem;
   border-radius: 999px;
   padding: 1rem;
-  margin-bottom: 1.5rem;
 }
 main h1 {
+  line-height: 1;
+  font-weight: var(--bold);
   color: var(--white);
+  margin-block: 1.5rem;
 }
 main p {
-  color: var(--medium-grey);
+  line-height: 1.6;
 }
 main form .button-container {
   display: flex;
@@ -164,12 +168,12 @@ main form .button-container .checked {
 }
 main form button[type=submit] {
   width: 100%;
-  background: var(--orange);
-  color: var(--white);
   border-radius: 999px;
-  text-align: center;
   letter-spacing: 1px;
-  padding-block: 0.5rem;
+  text-align: center;
+  color: var(--white);
+  background: var(--orange);
+  padding-block: 0.75rem;
 }
 main form button[type=submit]:hover {
   background: var(--white);

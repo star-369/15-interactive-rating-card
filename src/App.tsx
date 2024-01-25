@@ -3,21 +3,23 @@ import FormCard from "./components/FormCard";
 import SubmitCard from "./components/SubmitCard";
 
 export default function App() {
-  const [visible, setVisibility] = useState(false);
-  const [rating, setRating] = useState(0);
-  const handleVisibility = () => setVisibility(!visible);
-  const handleRating = (newRating: number) => setRating(newRating);
+  const [IsVisible, setVisibility] = useState(false);
+  const [hasRating, setRating] = useState(0);
+  const handleVisibility = () => setVisibility(!IsVisible);
+  const handleRating = (rating: number) => setRating(rating);
 
   return (
     <>
-      {!visible && (
+      {!IsVisible && (
         <FormCard
-          rating={rating}
+          rating={hasRating}
           onSelect={handleRating}
-          onSubmit={handleVisibility}
+          onClose={handleVisibility}
         />
       )}
-      {visible && <SubmitCard rating={rating} onClose={handleVisibility} />}
+      {IsVisible && (
+        <SubmitCard rating={hasRating} onClose={handleVisibility} />
+      )}
     </>
   );
 }

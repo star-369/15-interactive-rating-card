@@ -1,17 +1,16 @@
-import "../css/style.css";
 import iconStar from "../assets/icon-star.svg";
 import React from "react";
 
 interface Props {
-  onSubmit: () => void;
-  onSelect: (newRating: number) => void;
+  onClose: () => void;
+  onSelect: (rating: number) => void;
   rating: number;
 }
 
-export default function FormCard({ onSubmit, onSelect, rating }: Props) {
+export default function FormCard({ onClose, onSelect, rating }: Props) {
   const handleButtonClick = (event: React.MouseEvent) => {
     event.preventDefault();
-    onSubmit();
+    onClose();
   };
 
   const nums = [1, 2, 3, 4, 5];
@@ -34,7 +33,7 @@ export default function FormCard({ onSubmit, onSelect, rating }: Props) {
               key={num}
               type="button"
               value={num}
-              className={rating == num ? "checked btn-reset" : "btn-reset"}
+              className={rating === num ? "checked btn-reset" : "btn-reset"}
               onClick={() => {
                 onSelect(num);
               }}
